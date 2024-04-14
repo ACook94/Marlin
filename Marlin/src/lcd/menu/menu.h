@@ -40,7 +40,7 @@ typedef void (*selectFunc_t)();
 #define SS_DEFAULT SS_CENTER
 
 #if ENABLED(BABYSTEP_ZPROBE_OFFSET) && PROBE_OFFSET_ZMIN >= -9 && PROBE_OFFSET_ZMAX <= 9
-  #define BABYSTEP_TO_STR(N) ftostr43sign(N)
+  #define BABYSTEP_TO_STR(N) ftostr42_52(N)
 #elif ENABLED(BABYSTEPPING)
   #define BABYSTEP_TO_STR(N) ftostr53sign(N)
 #endif
