@@ -691,9 +691,9 @@
     #define DEFAULT_Ki_LIST {   1.08,   1.08 }
     #define DEFAULT_Kd_LIST { 114.00, 114.00 }
   #else
-    #define DEFAULT_Kp  33.3
-    #define DEFAULT_Ki  3.25
-    #define DEFAULT_Kd  85.2
+    #define DEFAULT_Kp  33.4
+    #define DEFAULT_Ki  3.34
+    #define DEFAULT_Kd  83.5
   #endif
 #else
   #define BANG_MAX 255    // Limit hotend current while in bang-bang mode; 255=full current
@@ -780,9 +780,9 @@
   //#define PID_BED_DEBUG // Print Bed PID debug data to the serial port.
 
   // Creality Ender-3 Pro
-  #define DEFAULT_bedKp 111.3
-  #define DEFAULT_bedKi 21.74
-  #define DEFAULT_bedKd 379.9
+  #define DEFAULT_bedKp 127.9
+  #define DEFAULT_bedKi 24.97
+  #define DEFAULT_bedKd 436.5
 
   // FIND YOUR OWN: "M303 E-1 C8 S90" to run autotune on the bed at 90 degreesC for 8 cycles.
 #else
@@ -1582,7 +1582,7 @@
  *     |    [-]    |
  *     O-- FRONT --+
  */
-#define NOZZLE_TO_PROBE_OFFSET { -43, -4.0, -2.72 }
+#define NOZZLE_TO_PROBE_OFFSET { -43, -3.5, -2.72 }
 
 // Enable and set to use a specific tool for probing. Disable to allow any tool.
 //#define PROBING_TOOL 0
@@ -1826,11 +1826,11 @@
 #define Y_BED_SIZE 235
 
 // Travel limits (linear=mm, rotational=°) after homing, corresponding to endstop positions.
-#define X_MIN_POS -2.0
-#define Y_MIN_POS -4.5
+#define X_MIN_POS -1.5
+#define Y_MIN_POS -5.0
 #define Z_MIN_POS 0
 #define X_MAX_POS 250
-#define Y_MAX_POS 238
+#define Y_MAX_POS 240
 #define Z_MAX_POS 250
 //#define I_MIN_POS 0
 //#define I_MAX_POS 50
@@ -2089,7 +2089,7 @@
    */
   #define ENABLE_LEVELING_FADE_HEIGHT
   #if ENABLED(ENABLE_LEVELING_FADE_HEIGHT)
-    #define DEFAULT_LEVELING_FADE_HEIGHT 10.0 // (mm) Default fade height.
+    #define DEFAULT_LEVELING_FADE_HEIGHT 5.0 // (mm) Default fade height.
   #endif
 
   /**
@@ -2119,7 +2119,7 @@
 #if ANY(AUTO_BED_LEVELING_LINEAR, AUTO_BED_LEVELING_BILINEAR)
 
   // Set the number of grid points per dimension.
-  #define GRID_MAX_POINTS_X 7
+  #define GRID_MAX_POINTS_X 9
   #define GRID_MAX_POINTS_Y GRID_MAX_POINTS_X
 
   // Probe along the Y axis, advancing X after each column
